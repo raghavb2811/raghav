@@ -1,0 +1,77 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 2rem 0;
+  width: 23%;
+  
+  img, video{
+    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+
+  .image-container {
+  width: 100%;  /* Set a fixed width for the container */
+  height: 300px; /* Set a fixed height for the container, making them square */
+  overflow: hidden; /* Hide any overflow if the image is larger than the container */
+}
+.image-container img {
+  /* Make the image fill the container's width and height */
+  width: 100%;
+  height: 90%;
+  /* Resizes the image to cover the entire container, maintaining aspect ratio. 
+     Parts of the image may be cropped to fit. */
+  object-fit: fill; 
+  /* Adjust the position of the cropped area (optional) */
+  object-position: center; /* Default is center (50% 50%) */
+}
+
+}
+
+.skills {
+  margin-left: -0.25rem;
+  h4 {
+    font-size: 0.75rem;
+    color: #e3e3e3;
+    font-style: italic;
+    margin-left: 0.25rem;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+      background-color: #e3e3e3;
+      color: #21343c;
+      border-radius: 4px;
+      margin: 0.25rem;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      padding: 0.15rem 0.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .project {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .project {
+    width: 100%;
+  }
+}
